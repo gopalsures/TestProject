@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{%extends 'testapp/index.html'%}
+{%block body_block%}
+
+  <div class="container" align='centre'>
+    <div class="container" align='centre'>
+
+    <title> Lesson Create</title>
+    <form  method="post">
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type="submit" class="btn-btn-primary btn-lg"value="ADD LESSON">
+    </form>
+  </div>
+
+  </div>
+
+  {%endblock%}

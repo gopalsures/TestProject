@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%extends 'testapp/index.html'%}
+{%block body_block%}
+  <div class="container" align='centre'>
+    <div class="container" align='centre'>
+
+          <h2>list of all Lesson</h2>
+          <ol>
+            {% for less in lesson_list %}
+            <h3><li><a href="../lesupdate/{{less.id}}/">{{less.lesson_title}}</a></li></h3>
+
+            {%endfor%}
+          </ol>
+            <form class="" action="/logout/" method="get">
+              <button type="submit" name="button">logout</button>
+          </form>
+
+    </div>
+
+  </div>
+
+{%endblock%}

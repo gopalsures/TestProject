@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%extends 'testapp/index.html'%}
+{%block body_block%}
+
+
+  <div class="container" align='centre'>
+    <div class="container" align='centre'>
+
+  <body>
+    <h2>Login</h2>
+    <form class="" action="/login/" method="post">
+      {%csrf_token%}
+      {{form.as_p}}
+      <button type="submit" name="button">login</button>
+      <a href="../userreg/" class="btn btn-primary">signup</a>
+    </form>
+  </body>
+
+  </div>
+
+</div>
+
+{%endblock%}

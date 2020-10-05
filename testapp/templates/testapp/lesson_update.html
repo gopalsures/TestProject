@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+
+    <title>APP DATA</title>
+  </head>
+  <body>
+    <centre>
+    <h1>UPDATED Lesson INFORMATION</h1>
+    <form class="" action="/testapp/lesupdate/{{obj.id}}/"  method="post" >
+      {% csrf_token %}
+      Lesson Name: <input type="text" name="lesson_title" value="{{obj.lesson_title}}"> <br><br>
+
+      Lesson Descriptions: <input type="text" name="lesson_descri" value="{{obj.lesson_descri}}"> <br><br>
+
+      <input type="submit" name="" value="UPDATED">
+    </form>
+
+    <h1>Delete Lesson INFORMATION</h1>
+    <form class="" action="/testapp/lesdelete/{{obj.id}}/"  method="get" >
+      Lesson Name: <input type="text" name="lesson_title" value="{{obj.lesson_title}}"> <br><br>
+      <input type="submit" name="" value="Delete">
+      </centre>
+
+  </body>
+</html>

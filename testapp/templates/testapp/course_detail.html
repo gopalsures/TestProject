@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Course information</h1>
+      <table>
+        <thead>
+          <th>Course Title</th>
+          <th>Course Descriptions</th>
+          <th>course Images</th>
+          <th><button type="button" name="button">delete</button></th>
+          <th><button type="button" name="button">update</button></th>
+
+        </thead>
+        {% for x in obj %}
+        <tr>
+          <td>{{x.course_title}}</td>
+          <td>{{x.course_desc}}</td>
+          <td>{{x.course_images}}</td>
+          <td>
+            <form class="" action="/testapp/cdelete/{{x.id}}/" method="get">
+
+              <button type='submit' name="delete">Delete</button><br><br></form>
+            </td>
+              <td><form class="" action="/testapp/cupdate/{{x.id}}/" method="get">
+
+                  <button type='submit' name="update">update</button><br><br>
+
+                </form></td>
+                </tr>
+              {% endfor %}
+            </table>
+
+          </body>
